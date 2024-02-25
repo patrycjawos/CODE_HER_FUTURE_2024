@@ -1,0 +1,318 @@
+/* podstawowe style dla strony */
+* {
+  box-sizing: border-box;
+}
+/* marginesy zewnetrzne i wewnętrzne wynoszą 0 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: "Catamaran", sans-serif;
+  font-style: normal;
+  font-size: 18px;
+  color: #373737;
+  line-height: 1.5;
+}
+img {
+  max-width: 100%;
+}
+.container {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+/* typografia */
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+h2,
+h3 {
+  font-weight: 100;
+  margin: 0 0 20px 10px;
+  line-height: 1;
+}
+
+h2 {
+  font-size: 70px;
+}
+h3 {
+  font-size: 30px;
+}
+p {
+  margin: 0 0 10px;
+}
+
+/* header and menu */
+.header {
+  padding: 30px 20px 0;
+}
+nav {
+  text-align: right;
+}
+.menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  display: inline-block;
+}
+.menu a {
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+#hero {
+  background: url("../images/hero-background-2.jpg");
+  background-size: cover;
+  background-position: bottom;
+  width: 100%;
+  height: 100vh;
+}
+/* .hero_logo {
+    color: #bf0034;
+  } */
+.hero_title {
+  font-weight: 900;
+  font-size: 120px;
+  line-height: 1;
+  margin: 100px 0 40px;
+  color: #fff;
+}
+.hero_content p {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.hero_button {
+  color: #fff;
+  border: 3px solid #bf0034;
+  padding: 8px 30px;
+  text-decoration: none;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* sections */
+section {
+  padding: 100px;
+}
+
+.section_violet {
+  background-color: #4f247c;
+  color: #fff;
+}
+.section_pink {
+  background-color: #bf0034;
+  color: #fff;
+}
+
+/* flexbox sekcje style */
+.column_container {
+  display: flex;
+}
+.column .columns_2_container {
+  flex-direction: row;
+  width: 45%;
+}
+.columns_4_container {
+  text-align: center;
+  flex-basis: 25%;
+}
+
+.columns_3_container {
+  flex-wrap: wrap;
+  row-gap: 25px;
+}
+
+.columns_3_container .column {
+  width: 32%;
+}
+
+/* sekcja about */
+#about .columns_2_container {
+  padding-left: 30px;
+}
+
+.about_section {
+  padding: 120px 0;
+}
+.about_image {
+  text-align: center;
+  position: relative;
+  max-height: 550px;
+}
+.about_image img {
+  max-height: 550px;
+}
+/* pseudoelementy */
+.about_image::before {
+  content: "";
+  border: 20px solid #4f247c;
+  position: absolute;
+  top: -30px;
+  left: 0px;
+  width: 150px;
+  height: 350px;
+  box-sizing: border-box;
+  z-index: -2;
+}
+.about_image::after {
+  content: "";
+  /* border: 20px solid #bf0034; */
+  background-color: #bf0034;
+  position: absolute;
+  top: 35px;
+  right: -20px;
+  width: 160px;
+  height: 250px;
+  box-sizing: border-box;
+  z-index: -1;
+}
+/* sekcja zainteresowania */
+.interests_section svg {
+  border: 2px solid #bf0034;
+  border-radius: 50%;
+  padding: 25px;
+}
+.interest_name {
+  margin: 20px 0;
+}
+.interest_text {
+  padding: 0 10px;
+  font-size: 14px;
+}
+/* sekcja galeria */
+.photos_title {
+  text-align: center;
+  color: #4f247c;
+}
+.photos_lead {
+  text-align: center;
+  max-width: 70%;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.photos_section figure {
+  margin: 0;
+}
+.photos_section img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+.photos_section figcaption {
+  font-size: 14px;
+  margin-bottom: 0;
+  text-align: center;
+}
+/* sekcja z cytatem */
+.quote_section {
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+.quote_section::after {
+  content: "";
+  background-color: #4f247c;
+  position: absolute;
+  right: -90px;
+  bottom: -75px;
+  width: 350px;
+  height: 350px;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.qoute_text {
+  text-align: right;
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 2;
+}
+.qoute_author {
+  text-align: right;
+  font-size: 14px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 2;
+}
+/* sekcja z formularzem */
+.contact_title {
+  text-align: center;
+  margin: 0 auto;
+}
+.contact_form {
+  width: 50%;
+  margin: 0 auto;
+}
+.contact_form label,
+.contact_form input,
+.contact_form textarea {
+  display: block;
+  width: 100%;
+}
+
+.contact_form input,
+.contact_form textarea {
+  border: 3px solid #4f247c;
+  border-radius: 0;
+  padding: 8px 15px;
+  margin-bottom: 15px;
+}
+.contact_form label {
+  padding-bottom: 5px;
+}
+.submit_button {
+  color: #fff;
+  background-color: #4f247c;
+  border: 3px solid #4f247c;
+  text-decoration: none;
+  padding: 10px 40px;
+  margin: 30px auto 0;
+  display: block;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.submit_button:hover {
+  color: #4f247c;
+  background-color: #fff;
+}
+
+/* style dla footera */
+.footer {
+  padding: 40px 0;
+}
+.copyright,
+.social {
+  width: 49%;
+  display: inline-block;
+}
+.social {
+  text-align: right;
+}
+.social a {
+  display: inline-block;
+  /* zmiana koloru ikony odbywa się z poziomu html a nie css */
+
+  /* color: #fff; */
+  text-decoration: none;
+  padding-left: 10px;
+}
+.copyright {
+  font-size: 14px;
+}
